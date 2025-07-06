@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Donation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #111;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+        video {
+            width: 100%;
+            max-height: 340px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        img {
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+        }
+        button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        .address {
+            word-break: break-all;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Help After My Accident</h2>
+        <p>
+            I was recently in a car accident. I had spent all my savings on a work van, but sadly it turned out to be unusable.<br><br>
+            Without the van, I can’t earn money — I run my own small business. On top of that, I injured my back in the crash, which makes it impossible for me to work as a paver for now.<br><br>
+            That’s why I’m reaching out and kindly asking for help from good-hearted people.<br><br>
+            I know everyone works hard for their money — and that’s why I truly appreciate every single dollar of support.<br><br>
+            <strong>Thank you from the bottom of my heart.</strong>
+        </p>
+        <video controls>
+            <source src="donation_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAAC9UlEQVR4nO2cTW6kMBCFX42Remlu0EcxN4vmZvgo3ACWSLTeLMplIFklnekfKBaoUfMptvrJVa/KjhDfvvKf7zOAQw455JBDDjl0TEjK1UC6SQS5ftJrshe6pwzPocdDiSQ5Auy/viMdAkmSe+hHf8mhN4GmugAAkI8RQG4DkduiEhFpnjc8hx4GNZ+eBZEQxFmAOAKYBF8M6ovPyaHfhSYR/m0DkcabII3ha8Xi7ebk0PehSGoKUSRwU1lIh5uGE5LL84bn0MOgEjWyuoqgT5KGCyUNzQIgLALcZAu9+JwcugdSRWwCQ77OAsQFzNdZkK8LgLiPHC8+J4fugaCuMpFEGgGNHxohLJIURxrLe+xffE4O3QOpItjHrQSQuIA9AvW2FipcEYeHiiI4bn94vXEMLNqIC/RbuiKODpWoAVsjAAR93ErFXnFFnAeaLmS/NjIQKJ19lm4S2Za332RODv0EqktBqTiUmwURTTmBGkl8jTg69NlrsDevoXkEgJJoFr24Ig4OVa9RbiVdGIFiPWJdMri41zgXJB9DA/ZTA5Erra8xXHShkO7Jw3PoMZB5DXMY1tcIRKorA4BSnvCocXjIogYAyyOs9qBBBPsahSvi6JB5jZokUEtSdb/UmkzUyxVxZKiuEYFWcQjcuU/LLHuvUJ0CMvc5hq3NUDOqzQ0rVLgizgFtokYpQMQF0EQTa39rKVmGK+Lw0FYRm1QykmvZWjujyesRp4Cq+6xXLEVtFEe65pgeNc4DrT4CaRDB2gDtp8aaG9PFul9vMSeH7oHWM10AApGvs5BDU2IFVBazNUDfYk4O3QVpKWIE+LcFkIYLpYsmhpJt1lL2e8zJobsgO9MlXZxFujhvN19nEUFunzg8hx4GfT7TRUwNmNuRwNQCqVczugC42Z7tF5+TQ78PpUEE+UoCtq9KpK2nu549PIf+I7TZMVOK1ft6dh935Up3n4eH9vWIQNtGV8SwnuHw8xongcT/M5lDDjnkkEMOOfRD6B8O1qneyFHl8wAAAABJRU5ErkJggg==" alt="SOL QR Code">
+        <div class="address" id="wallet">cg6uzJfRA8j2REqH3HgyqFfE1kSU3DsXyEoxpNTMvAq</div>
+        <button onclick="copyToClipboard()">Copy Address</button>
+    </div>
+    <script>
+        function copyToClipboard() {
+            const address = document.getElementById("wallet").innerText;
+            navigator.clipboard.writeText(address).then(() => {
+                alert("Address copied to clipboard!");
+            });
+        }
+    </script>
+</body>
+</html>
